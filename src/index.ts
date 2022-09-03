@@ -122,3 +122,28 @@ function greet(name: string | null | undefined) {
 greet(null);
 
 /* optional chaining */
+
+type Customer = {
+  birthday: Date;
+};
+
+function getCustomer(id: number): Customer | null | undefined {
+  return id === 0 ? null : { birthday: new Date() };
+}
+
+let customer = getCustomer(1);
+// Optional property access operator --> the question mark says 'only continue if customer !== null && customer !== undefined
+console.log(customer?.birthday.getFullYear());
+
+// Optional element access operator
+
+// assuming we have an array of customers & we want to print the first customer to the console:
+// if array is null or undefined, we will not be able to access the first element
+// therefore, --> customers?.[0]
+
+// Optional call operator
+
+let log: any = null; // references a fn
+log?.("a"); // ...otherwise program would crash because log is null
+
+// piece of code will get executed ONLY if log is referencing an actual function!
