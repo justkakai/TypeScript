@@ -108,3 +108,17 @@ let quantity: Quantity = 50;
 type Metric = "cm" | "inch";
 
 let metric: Metric = "cm";
+
+/* nullable types */
+
+function greet(name: string | null | undefined) {
+  if (name) {
+    console.log(name.toUpperCase());
+  } else {
+    console.log("Habari!");
+  }
+}
+
+greet(null);
+
+/* optional chaining */
