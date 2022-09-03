@@ -38,4 +38,10 @@ function kgToLbs(weight) {
 }
 kgToLbs(10);
 kgToLbs("10kg");
+let textBox = {
+    drag: () => { },
+    resize: () => { },
+};
+let quantity = 50;
+let metric = "cm";
 //# sourceMappingURL=index.js.map

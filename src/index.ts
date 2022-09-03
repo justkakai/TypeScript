@@ -98,3 +98,13 @@ let textBox: UIWidget = {
   drag: () => {},
   resize: () => {},
 }; // type intersection in action!
+
+// Literal types (annotating with exact/specific values)
+
+type Quantity = 50 | 100; // type alias --> quantity can only either be 50 or 100!
+
+let quantity: Quantity = 50;
+
+type Metric = "cm" | "inch";
+
+let metric: Metric = "cm";
